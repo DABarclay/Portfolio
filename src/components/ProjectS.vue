@@ -17,8 +17,8 @@
                     </div> 
                     </Transition>
                     <div class="link-wrapper">
-                        <a href="https://medusaprotocol.com/mesp/staking-list/bsc/"><button class="button">Website</button></a>
-                        <a href="https://github.com/DABarclay/MESP/"><button class="button">GitHub</button></a>
+                        <a href="https://medusaprotocol.com/mesp/staking-list/bsc/" @click="medmain()"><button class="button" >Website</button></a>
+                        <a href="https://gitfront.io/r/user-2278559/XZDhw9bXtMpt/MESP-PORTFOLIO/" @click="gitmed()"><button class="button">GitHub</button></a>
                     </div>
                 </div>
 
@@ -31,8 +31,8 @@
                             This is my first website and it was built using React. I was given the design and desired interactive features and then tasked with coding it from scratch. This project acted as my introduction to Web Development and gave me a deeper insight on how to use HTML and CSS as well as a practical introduction to using Javascript,  Node.js and NPM. 
                     </div>
                     <div class="link-wrapper">
-                        <a href="https://dabarclay.github.io/stakingservice/"><button class="button">Website</button></a>
-                        <a href="https://github.com/DABarclay/stakingservice"><button class="button">GitHub</button></a>
+                        <a href="https://dabarclay.github.io/stakingservice/" @click="spamain()"><button class="button">Website</button></a>
+                        <a href="https://github.com/DABarclay/stakingservice" @click="gitspa()"><button class="button">GitHub</button></a>
                     </div>
                 </div>
                 <div class="project-img">
@@ -44,6 +44,8 @@
     </div>
 </template>
 <script>
+
+import axios from 'axios';
 
 export default {
   name: 'Projects',
@@ -69,6 +71,27 @@ export default {
     animations.forEach(animations =>
         observer.observe(animations)
     )
+  },
+
+
+
+  methods: {
+    gitmed(){
+      axios.post(`${process.env.VUE_APP_MY_API_URL}/gitmed`
+        )
+    },
+    medmain(){
+      axios.post(`${process.env.VUE_APP_MY_API_URL}/medmain`
+      )
+    },
+    gitspa(){
+      axios.post(`${process.env.VUE_APP_MY_API_URL}/gitspa`
+      )
+    },
+    spamain(){
+      axios.post(`${process.env.VUE_APP_MY_API_URL}/spamain`
+      )
+    }
   }
 }   
 

@@ -5,10 +5,10 @@
     <div class="linear-gradient">
       <AboutMe></AboutMe>
       <Projects></Projects>
+    </div>  
       <ContactBlock></ContactBlock>
       <BackToTop></BackToTop> 
       <Footer></Footer>
-    </div>
   </div>
 </template>
 
@@ -19,6 +19,10 @@ import Projects from './components/ProjectS.vue'
 import ContactBlock from './components/ContactBlock.vue'
 import Footer from './components/Footer.vue'
 import BackToTop from './components/BackToTopButton.vue'
+
+
+import axios from 'axios'
+
 
 export default {
   name: 'App',
@@ -31,6 +35,27 @@ export default {
     BackToTop,
 
   },
+  mounted(){
+    this.setCookie();
+  },
+  methods: {
+    setCookie(){
+      if(!this.$cookies.isKey('dabarclayportfolio')){
+        this.$cookies.set('dabarclayportfolio', true, 60*60*24);
+        this.post();
+      };
+    },
+
+    async post(){
+      axios.post(`${process.env.VUE_APP_MY_API_URL}`, {
+          plus: "Plus 1"
+      }).then(function(response) {
+          
+      }).catch(function (error) {
+          console.log(error);
+      });
+    }
+  }
 }
 </script>
 

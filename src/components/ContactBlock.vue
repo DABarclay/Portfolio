@@ -2,9 +2,6 @@
     <div id="contact-block" class="contact-block">
         <div class="title">Contact</div>
         <div class="underline"></div>
-        <div class="contact-paragraph">
-            If you 
-        </div>
         <div class="contact-form-wrapper">
             <form ref="form" @submit.prevent="validateForm" class="form" name="form">
                 <label class="input-title">Name*</label>
@@ -95,6 +92,7 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: black;
 }
 .title{
     font-size: 50px;

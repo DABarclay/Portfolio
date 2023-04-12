@@ -3,6 +3,9 @@
     <footer class="footer">
         <div class="footer-message">
             Built with Vue.js 3 by Daniel Barclay
+            <a class="github-link" href="https://github.com/DABarclay/Portfolio">
+              See repo
+            </a>
         </div>
         <div class="nav-links">
             <li><a class="button" @click="aboutme()">About Me</a></li>
@@ -13,6 +16,8 @@
   </div> 
 </template>
 <script>
+import { onMounted } from 'vue';
+
 export default {
   methods: {
     aboutme(){
@@ -23,7 +28,10 @@ export default {
     },
     contact(){
       document.getElementById("contact-block").scrollIntoView({ behavior: "smooth"});
-    }
+    },
+  },
+  onMounted(){
+    console.log("Mounted");
   }
 }
 </script>
@@ -36,7 +44,8 @@ export default {
     justify-content: space-between;
     font-size: 14px;
     padding:0 4vw 10px 4vw;
-    height: 30px;
+    min-height: 30px;
+    background-image: black;
 }
 
 .nav-links, li{
@@ -59,4 +68,13 @@ li{
     cursor: pointer;
 }
 
+.github-link{
+  margin: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.github-link:hover{
+  color: rgb(206, 157, 35);
+}
 </style>

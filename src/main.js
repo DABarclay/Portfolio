@@ -2,6 +2,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import store from './store'
 import DKToast from 'vue-dk-toast';
+import VueCookies from 'vue-cookies'
 
 createApp(App).use(store).use(DKToast, {
     duration: 5000,
@@ -16,6 +17,6 @@ createApp(App).use(store).use(DKToast, {
     },
     class: 'custom-class', // Added to each toast,
     max: 10,
-  })
+  }).use(VueCookies)
 .mount('#app')
     
