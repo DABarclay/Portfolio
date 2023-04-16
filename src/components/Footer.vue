@@ -3,9 +3,6 @@
     <footer class="footer">
         <div class="footer-message">
             Built with Vue.js 3 by Daniel Barclay
-            <a class="github-link" href="https://github.com/DABarclay/Portfolio">
-              See repo
-            </a>
         </div>
         <div class="nav-links">
             <li><a class="button" @click="aboutme()">About Me</a></li>
@@ -16,7 +13,6 @@
   </div> 
 </template>
 <script>
-import { onMounted } from 'vue';
 
 export default {
   methods: {
@@ -68,13 +64,4 @@ li{
     cursor: pointer;
 }
 
-.github-link{
-  margin: 10px;
-  color: white;
-  text-decoration: none;
-}
-
-.github-link:hover{
-  color: rgb(206, 157, 35);
-}
 </style>

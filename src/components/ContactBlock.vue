@@ -73,7 +73,7 @@ export default {
         },});
     },
     sendEmail() {
-      emailjs.sendForm('', '', this.$refs.form, '')
+      emailjs.sendForm('service_rpt6tsw', 'template_0a5ae3r', this.$refs.form, 'Q3A-iVXPB')
         .then((result) => {
             var form = document.getElementsByName('form')[0];
             this.toastsuccess();
