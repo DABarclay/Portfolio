@@ -89,27 +89,27 @@ export default {
 
   methods: {
     gitmed(){
-      axios.post(`${process.env.VUE_APP_MY_API_URL}/gitmed`
+      axios.post(`${process.env.VUE_APP_MY_API_URL}gitmed`
         )
     },
     medmain(){
-      axios.post(`${process.env.VUE_APP_MY_API_URL}/medmain`
+      axios.post(`${process.env.VUE_APP_MY_API_URL}medmain`
       )
     },
     gitspa(){
-      axios.post(`${process.env.VUE_APP_MY_API_URL}/gitspa`
+      axios.post(`${process.env.VUE_APP_MY_API_URL}gitspa`
       )
     },
     spamain(){
-      axios.post(`${process.env.VUE_APP_MY_API_URL}/spamain`
+      axios.post(`${process.env.VUE_APP_MY_API_URL}spamain`
       )
     },
     portfoliovue(){
-        axios.post(`${process.env.VUE_APP_MY_API_URL}/portfoliovue`
+        axios.post(`${process.env.VUE_APP_MY_API_URL}portfoliovue`
       )
     },
     portfolioexpress(){
-        axios.post(`${process.env.VUE_APP_MY_API_URL}/portfolioexpress`
+        axios.post(`${process.env.VUE_APP_MY_API_URL}portfolioexpress`
       )
     }
   }
